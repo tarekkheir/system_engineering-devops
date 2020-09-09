@@ -1,0 +1,6 @@
+#!/bin/bash
+ls
+<<<<<<< HEAD:1-listit
+
+=======
+>>>>>>> 984dd4fa7985364d4e9827406d4cd0f9837700a3:0x00-shell_basics/1-listit
