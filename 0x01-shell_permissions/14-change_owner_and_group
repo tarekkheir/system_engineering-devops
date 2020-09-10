@@ -1,2 +1,2 @@
 #!/bin/bash
-chown betty:holberton .
+sudo chown betty:holberton .
