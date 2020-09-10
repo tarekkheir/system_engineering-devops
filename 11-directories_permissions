@@ -1,0 +1,2 @@
+#!/bin/bash
+find /opt/lampp/htdocs -type d -exec chmod 111 {} \;
