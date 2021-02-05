@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 #display 10 times Holberton School
 
-printf "Holberton School\n%.s" {1..10}
+for ((i = 0; i < 10; i++))
+do
+    echo "Holberton School"
+done
