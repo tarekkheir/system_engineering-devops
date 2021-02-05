@@ -3,16 +3,14 @@
 
 i=0
 
-while ((i++ <= 10))
+while ((i++ < 10))
 do
     if [ "$i" -eq 4 ]
     then
         echo "bad luck"
-        ((i++))
     elif [ "$i" -eq 8 ]
     then
         echo "good luck"
-        ((i++))
     else
         echo "Holberton School"
     fi
