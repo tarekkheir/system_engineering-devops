@@ -4,10 +4,9 @@
 i=0
 j=1
 
-echo "Hour: $i"
-
-while (("i" < 12))
+while (("i" <= 12))
 do
+    echo "Hour: $i"
     j=1
     while (("j" < 60))
     do
@@ -15,5 +14,4 @@ do
         ((j++))
     done
     ((i++))
-    echo "Hour: $i"
 done
