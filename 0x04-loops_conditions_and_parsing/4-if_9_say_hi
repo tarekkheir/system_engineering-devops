@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#display 10 times Holberton School
+
+i=1
+
+while (($i <= 10))
+do
+    echo "Holberton School"
+    if [ $i -eq 9 ]
+    then
+        echo "Hi"
+    fi
+    let i++
+done
