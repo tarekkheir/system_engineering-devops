@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#display 10 times Holberton School
+
+list=$(ls)
+
+for file in $list
+do
+    echo "$file" | cut -f2 -d"-"
+done
