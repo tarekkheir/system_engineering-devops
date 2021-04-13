@@ -8,6 +8,7 @@ sudo sed -i 's/listen 80 default_server;/a rewrite ^\/redirect_me https:\/\/www.
 sudo touch /var/www/html/404_error.html
 sudo chmod 666 404.html
 echo "Ceci n'est pas une pag" >> /var/www/html/404_error.html
-sudo sed -i 's/listen 80 default_server;\  error_page 404 \/404_error.html;\n  rewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;/' /etc/nginx/sites-available/default 
+sudo sed -i 's/listen 80 default_server;\  rewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;/' /etc/nginx/sites-available/default
+sudo sed -i 's/listen 80 default server;\ error_page 404 /404_error.html;' /etc/nginx/sites-available/default
 sudo sed -i "s/listen 80 default_server;\  add_header X-Served-By \$hostname;/" /etc/nginx/sites-available/default
 sudo service nginx restart
