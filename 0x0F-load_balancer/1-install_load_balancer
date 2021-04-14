@@ -2,8 +2,9 @@
 # Bash script that Install and configure HAproxy on your lb-01 server.
 sudo apt-get update && apt-get upgrade
 sudo apt-get install -y haproxy
-sudo chmod 666 /etc/haproxy/haproxy.cfg
-sudo echo "ENABLED=1" >> /etc/haproxy/haproxy.cfg
+sudo chmod 666 /etc/haproxy/haproxy
+sudo chmod 666 /etc/haproxy.cfg
+sudo echo "ENABLED=1" >> /etc/haproxy/haproxy
 sudo echo "listen test
     bind 0.0.0.0:80
     balance roundrobin
