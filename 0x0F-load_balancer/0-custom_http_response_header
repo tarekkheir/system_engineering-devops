@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Bash script that install a new Ubuntu Machine
-sudo apt-get update && upgrade
+sudo apt-get update && apt-get upgrade
 sudo apt-get -y install nginx
 sudo chmod 666 /var/www/html/index.nginx-debian.html
 echo "Holberton School" >> /var/www/html/index.nginx-debian.html
