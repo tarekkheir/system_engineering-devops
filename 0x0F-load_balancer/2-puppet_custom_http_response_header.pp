@@ -1,8 +1,13 @@
 # sets up your web servers for the deployment of web_static using puppet and add custom header
 
+exec { 'update':
+  command => '/usr/bin/apt-get update',
+}
+
 package {'nginx':
-  ensure => present,
-  name   => 'nginx',
+  ensure  => present,
+  name    => 'nginx',
+  require => Exec['update']
 }
 
 file {'/var/www/html/index.html':
