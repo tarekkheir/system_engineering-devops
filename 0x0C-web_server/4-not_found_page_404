@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#Bash script that install a new Ubuntu Machine
+sudo apt-get update && apt-get upgrade
+sudo apt-get -y install nginx
+sudo chmod 666 /var/www/html/index.nginx-debian.html
+echo "Holberton School" >> /var/www/html/index.nginx-debian.html
+sudo touch /var/www/html/404_error.html
+sudo chmod 666 404_error.html
+echo "Ceci n'est pas une page" >> /var/www/html/404_error.html
+sudo sed -i 's/listen 80 default_server;\n error_page 404 \/404_error.html;/ rewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;/' /etc/nginx/sites-available/default
+sudo service nginx restart
