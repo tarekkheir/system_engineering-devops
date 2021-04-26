@@ -4,7 +4,6 @@
 sudo apt-get update
 sudo apt install ufw
 sudo ufw default deny incoming
-sudo ufw default allow outgoing
 sudo ufw allow ssh/tcp
 sudo ufw allow http/tcp
 sudo ufw allow https/tcp
