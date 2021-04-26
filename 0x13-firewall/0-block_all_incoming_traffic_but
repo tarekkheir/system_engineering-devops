@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # install the ufw firewall and setup a few rules on web-01
 
-sudo apt-get update
-sudo apt install ufw
 sudo ufw default deny incoming
 sudo ufw allow ssh/tcp
 sudo ufw allow http/tcp
