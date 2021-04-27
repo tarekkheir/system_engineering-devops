@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# display whoami command of user passing in arguments
+sudo -u "$1" whoami
