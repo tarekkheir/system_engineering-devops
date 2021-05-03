@@ -21,7 +21,7 @@ def main():
             data = {"task": task['title'], "completed": task['completed'],
                     "username": user['username']}
             tasks.append(data)
-        all_users_data[user('id')] = tasks
+        all_users_data[user['id']] = tasks
 
     with open("todo_all_employees.json", "w") as f:
         json.dump(all_users_data, f)
