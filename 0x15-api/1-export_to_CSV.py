@@ -20,8 +20,7 @@ def main():
     with open("{}.csv".format(sys.argv[1]), "w") as f:
         writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
         for task in json:
-            status = str(task.get('completed'))
-            row = [sys.argv[1], name, status, task.get('title')]
+            row = [task.get('userId'), name, task.get('completed'), task.get('title')]
             writer.writerow(row)
 
 
