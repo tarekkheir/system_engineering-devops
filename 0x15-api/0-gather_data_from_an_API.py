@@ -17,9 +17,9 @@ def main():
 
     tasks = []
 
-    for i in range(0, total):
-        if json[i]['completed'] is True:
-            tasks.append(json[i]['title'])
+    for task in json:
+        if task.get('completed') is True:
+            tasks.append(task.get('title'))
             tasks_done += 1
 
     r = requests.get(url + sys.argv[1])
