@@ -2,8 +2,8 @@
 """ script that returns information about his/her TODO list progress"""
 
 
-import sys
 import requests
+import sys
 
 
 def main():
