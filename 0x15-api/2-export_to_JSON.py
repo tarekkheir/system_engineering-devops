@@ -19,7 +19,8 @@ def main():
     with open("{}.json".format(sys.argv[1]), "w") as f:
         tasks = []
         for task in j:
-            data = {"task": task['title'], "completed": task['completed'], "username": name}
+            data = {"task": task['title'], "completed": task['completed'],
+                    "username": name}
             tasks.append(data)
 
         file_data = {sys.argv[1]: tasks}
