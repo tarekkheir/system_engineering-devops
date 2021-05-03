@@ -15,7 +15,7 @@ def main():
 
     r = requests.get(url + sys.argv[1])
     j = r.json()
-    name = j['name']
+    name = j['username']
 
     with open("{}.csv".format(sys.argv[1]), "w") as f:
         writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
