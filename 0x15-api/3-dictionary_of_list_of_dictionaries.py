@@ -19,7 +19,7 @@ def main():
 
         for task in r:
             data = {"task": task['title'], "completed": task['completed'],
-                    "username": name}
+                    "username": user['username']}
             tasks.append(data)
         all_users_data[user('id')] = tasks
 
