@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ script that returns information about his/her TODO list progress"""
 
-
 import csv
 import requests
 import sys
@@ -20,7 +19,8 @@ def main():
     with open("{}.csv".format(sys.argv[1]), "w") as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in json:
-            row = [task['userId'], name, task['completed'], task['title']]
+            row = [task.get('userId'), name, task.get('completed'),
+                   task.get('title')]
             writer.writerow(row)
 
 
