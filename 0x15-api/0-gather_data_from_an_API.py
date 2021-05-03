@@ -22,7 +22,7 @@ def main():
             tasks.append(json[i]['title'])
             tasks_done += 1
 
-    r = requests.get(url + "2")
+    r = requests.get(url + sys.argv[1])
     j = r.json()
     name = j['name']
 
