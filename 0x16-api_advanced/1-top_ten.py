@@ -12,13 +12,10 @@ def top_ten(subreddit):
     header = {'User-Agent': content}
     response = requests.get(url, headers=header)
     if response.status_code == 404:
-        return None
+        print(None)
 
-    json = response.json()
-
-    if 'children' in json['data']:
+    else:
+        json = response.json()
         children = json['data']['children']
         for child in children:
             print(child['data']['title'])
-
-    return None
